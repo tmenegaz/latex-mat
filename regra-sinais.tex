@@ -1,0 +1,114 @@
+\section{Regra dos sinais}
+Demonstração da regra na adição e subtração
+
+Por fazer\dots
+
+\noindent Demonstração da regra na multiplicação e divisão
+
+Imagine um retângulo com lados $6$ por $5$ que foi dividido em retângulos menores, com dimensão $ r1 = 1 X 3 $, outro com $ r2 = 5 X 3 $, outro com $ r3 = 1 X 2 $ e um com $ r4 = 5 X 2 $, assim: \\
+
+\begin{tikzpicture}
+	\node[rectangle, draw,
+	minimum width = 6cm,
+	minimum height = 5cm,
+	] (r) at (0,0) {6x5};
+
+	\node[block,
+	minimum width = 1cm,
+	minimum height = 3cm
+	] (r1) at ++(-2.5,1) {r1};
+
+	\node[block, 
+	fill=red!50,
+	minimum width = 5cm,
+	minimum height = 3cm
+	] (r2) at ++(0.5,1) {r2};
+
+	\node[block,
+	fill=black!50,
+	minimum width = 1cm,
+	minimum height = 2cm
+	] (r3) at ++(-2.5,-1.5) {r3};
+
+	\node[block,
+	fill=yellow!50,
+	minimum width = 5cm,
+	minimum height = 2cm
+	] (r4) at ++(0.5,-1.5) {r4};
+ \end{tikzpicture} \\
+
+ Daí, sabe-se que a área de $ 6 X 5 = 1 \cdot 3 + 5 \cdot 3 + 1 \cdot 2 + 5 \cdot 2 $ \\
+ $ \indent \indent \indent \indent \indent \indent \indent \indent \indent \; \: 30 = 3+15+2+10 $ \\
+ $ \indent \indent \indent \indent \indent \indent \indent \indent \indent \; \: 30 = 30 $
+
+ É então que, a partir dos valores obtidos do retângulo, podemos saber que para cada retângulo menor os valores são:
+
+\begin{itemize}
+	\item $ r1 = (6-5)(5-2) \Leftrightarrow r1 = 1 \cdot 3 $
+	\item $ r2 = (6-1)(5-2) \Leftrightarrow r2 = 5 \cdot 3 $
+	\item $ r3 = (6-5)(5-3) \Leftrightarrow r3 = 1 \cdot 2 $
+	\item $ r4 = (6-1)(5-3) \Leftrightarrow r4 = 5 \cdot 2 $
+\end{itemize}
+
+Agora podemos montar uma expressão que melhor ilustre as equivalências e resolver: \\
+$ (6-5)(5-2) + 5(5-2) + 1(5-3) + 5 \cdot 2 = 6X5 $ \\
+$ (6-5)(5-2) + 25 - 10 + 5-3 + 5 \cdot 2 = 6X5 $ \\
+$ 30 - 12 - 25 + 10 + 25 - 10 + 5-3 + 5 \cdot 2 = 6X5 $ \\
+$ 30 - 12 \cancel{-25} \cancel{+10} \cancel{+25} \cancel{-10} + 5 - 3 + 5 \cdot 2 = 6X5 $ \\
+$ 30 - 12 + 5 - 3 + 5 \cdot 2 = 6X5 $ \\
+$ 20 + 5 \cdot 2 = 6 \cdot 5 \\
+ \indent \! \! \! \! 20 + 10 = 6 \cdot 5 \\
+ \indent \indent 30 = 30 $
+
+\newpage
+
+Isso quer dizer que se consideramos o maior valor de um lado como sendo $a$, menos o menor valor desse mesmo lado com $b$ e multiplicarmos pelo lado adjacente, que também tomou o maior como sendo $c$ e, então, subtrair do menor $d$, têm-se a equivalência: \\
+ $ (a - b)(c - d) \Longrightarrow ac - ad - bc + bd$ \\
+
+ Dá-se o nome a essa propriedade de \textbf{distributiva} do produto pela soma ou, nesse caso, pela diferença de dois números. \\
+Como exemplo do produto pela soma, $ (a + b)(c + d) \Longrightarrow ac + ad + bc + bd$ \\
+
+Outro exemplo para a mesma operação, só que desta vez com $3$ termos. \\
+$ a(b+c) \Longrightarrow a \cdot b + a \cdot c $ 
+
+\begin{itemize}
+	\item $ 2(1 + 3) \Longrightarrow 2 \cdot 1 + 2 \cdot 3 = 8 $
+\end{itemize}
+
+Para as operações com números positivos o resultado é positivo. Na regra de sinais $ (+) \cdot (+) = (+) $. \\
+
+Agora, para as operações que tem o produto de um número positivo por um número negativo, fica ssim:
+
+\begin{itemize}
+	\item $ 2(-5) \Longrightarrow 2 \cdot -5 = \;? $. Para resolver essa expressão deve ser considerada a aplicação da propriedade distributiva de tal modo que o resultado seja uma equivalência. É possível pensar que um equilíbrio pode ser obtido quando duas forças tendem a $0$, ou seja quando essa forças se anulam. Para isso o $2(-5)$ será zero se somente se $-5$ for somado ao $5$, daí para obter a igualdade deve ser feito o seguinte: \\ $ 2(+5 - 5) \Longrightarrow 2 \cdot 0 = 0 $
+	\item por meio da distributiva, a soma dos $2$ produtos precisa ser entre opostos:\\ $ 2(+5-5) \Longleftrightarrow (2 \cdot +5) {\color{red}-} (2 \cdot {\color{red}+}5) \Longleftrightarrow +10 {\color{red}-} 10 = 0 $ 
+\end{itemize}
+
+Por meio das expressões apresentadas acima pode-se concluir que $ +a(-b) = -c $, ou seja, no produto pela diferença a regra de sinais é $(+) \cdot  (-) = (-) $. Isso também se aplica para $(-) \cdot  (+) = (-) $ por causa da propriedade comutativa \\
+
+É possível adotar o mesmo pensamento para operaçõs do tipo $ (-a)(-b) $, contudo o resultado será $+c$.
+Vejamos a seginte hipótese para a premissa:
+
+\begin{itemize}
+	\item $ (-3)(-4) = +c $ Para resolver presisamos de um número que somado a $(-4)$ ou a $(-3)$ o resultado seja $0$. Vou usar o $(+4)$ \\ $(-3)(-4+4) \Longrightarrow -3 \cdot 0 = 0$
+	\item Com a distributiva a resolução da expressão fica assim: \\
+	$ (-3)(-4+4) \\ ({\color{red}-} 3 ({\color{red}-} 4))+(-3 \cdot +4) $ \\
+	$ \indent \; ({\color{red}+}12) \;\: + \; (-12) $ \\ $ \indent \indent +12 - 12 = 0 $
+	\item portanto, podê-se concluir a partir da demostração de equivalência acima que \\ $ (-a)(-b) = (+c) $.
+\end{itemize}
+
+Para as operações de multiplicação entre número negativos o resultado é positivo. Na regra de sinais $ (-) \cdot (-) = (+) $. \\
+
+A regra de sinais na multiplicação é, portanto a seguinte: 
+ 
+ \begin{tabular}{|ccccc|}
+	\hline
+	(+) & $\cdot$ & (+) & $=$ & (+) \\
+	\hline
+	(+) & $\cdot$ & (-) & $=$ & (-) \\
+	\hline
+	(-) & $\cdot$ & (+) & $=$ & (-) \\
+	\hline
+	(-) & $\cdot$ & (-) & $=$ & (+) \\
+	\hline
+\end{tabular}
